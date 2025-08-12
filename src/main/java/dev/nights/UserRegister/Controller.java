@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class Controller {
     @GetMapping("/welcomeUser")
     public String welcome(){
-        return "Salve, tropa!";
+        return "Hello, user!";
     }
 }
