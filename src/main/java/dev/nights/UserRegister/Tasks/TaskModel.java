@@ -7,12 +7,15 @@ import java.util.List;
 @Entity
 @Table(name = "tb_tasks ")
 public class TaskModel {
+
     @Id //creating an id for the model
     @GeneratedValue(strategy = GenerationType.IDENTITY )
     private Long id;
 
+    @Column(name = "taskname_DB")
     private String name;
 
+    @Column(name = "area_DB")
     private String area;
 
     @OneToMany(mappedBy = "task") //one task can be assigned to many users

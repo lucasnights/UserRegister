@@ -18,11 +18,13 @@ public class UserModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "name_DB")
     private String name;
 
     @Column(unique = true)
     private String email;
 
+    @Column(name = "email_DB")
     private int age;
 
     @ManyToOne // define many tasks to one user
