@@ -21,10 +21,10 @@ public class UserModel {
     @Column(name = "name_DB")
     private String name;
 
-    @Column(unique = true)
+    @Column(unique = true, name = "email_DB")
     private String email;
 
-    @Column(name = "email_DB")
+    @Column(name = "age_DB")
     private int age;
 
     @ManyToOne // define many tasks to one user

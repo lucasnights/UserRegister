@@ -14,22 +14,22 @@ public class UserController {
 
     //Register user
     @PostMapping("/register")
-        public String userRegister(){
-            return "User registered";
+    public String userRegister(){
+        return "User registered";
         }
     //Show users registered
     @GetMapping("/show")
-        public String showUsers(){
+    public String showUsers(){
         return "Users:";
     }
     //Update user by ID
     @PutMapping("/update")
-        public String updateUsers(){
+    public String updateUsers(){
         return "User updated";
     }
     //Delete user by ID
     @DeleteMapping("/delete")
-        public String deleteUser(){
+    public String deleteUser(){
         return "User deleted.";
     }
 }
