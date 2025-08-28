@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@RequestMapping
+@RequestMapping("user")
 public class UserController {
 
     @GetMapping("/welcomeUser")
@@ -17,7 +17,7 @@ public class UserController {
     public String userRegister(){
         return "User registered";
         }
-    //Show users registered
+    //Show registered users
     @GetMapping("/show")
     public String showUsers(){
         return "Users:";
