@@ -1,6 +1,5 @@
 package dev.nights.UserRegister.Users;
 
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,16 +25,25 @@ public class UserController {
     public String userRegister(){
         return "User registered";
         }
+
     //Show registered users
     @GetMapping("/show")
     public List<UserModel> UserList(){
         return userService.listUsers();
     }
+
+    //Search registered users by id
+    @GetMapping("/show/{id}")
+    public UserModel findUserById(@PathVariable Long id){
+        return userService.listUsersById(id);
+    }
+
     //Update user by ID
     @PutMapping("/update")
     public String updateUsers(){
         return "User updated";
     }
+
     //Delete user by ID
     @DeleteMapping("/delete")
     public String deleteUser(){

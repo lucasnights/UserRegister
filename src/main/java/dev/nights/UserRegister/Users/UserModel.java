@@ -7,12 +7,17 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+
 @Entity
 @Table(name = "tb_user")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserModel {
+public  class UserModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
