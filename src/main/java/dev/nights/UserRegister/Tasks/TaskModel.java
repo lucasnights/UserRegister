@@ -1,5 +1,6 @@
 package dev.nights.UserRegister.Tasks;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import dev.nights.UserRegister.Users.UserModel;
 import jakarta.persistence.*;
 import java.util.List;
@@ -19,6 +20,7 @@ public class TaskModel {
     private String area;
 
     @OneToMany(mappedBy = "task") //one task can be assigned to many users
+    @JsonIgnore
     private List<UserModel> user;
 
 }

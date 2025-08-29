@@ -1,11 +1,20 @@
 package dev.nights.UserRegister.Users;
 
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 @RestController
 @RequestMapping("user")
 public class UserController {
+
+    private UserService userService;
+
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @GetMapping("/welcomeUser")
     public String welcome(){
@@ -19,8 +28,8 @@ public class UserController {
         }
     //Show registered users
     @GetMapping("/show")
-    public String showUsers(){
-        return "Users:";
+    public List<UserModel> UserList(){
+        return userService.listUsers();
     }
     //Update user by ID
     @PutMapping("/update")
